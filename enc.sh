@@ -24,6 +24,7 @@ cat $UNCFILE.enc
 # Or not write files at all: investigate the option of opening buffers at runtime and acting on them on the fly
 rm $UNCFILE
 rm $UNCFILE.enc
+rm key.bin
 rm secret.key.enc
 rm secret.key.txt
 
