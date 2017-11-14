@@ -13,7 +13,7 @@ base64 --decode $SKEY > $SKEY.bin
 openssl rsautl -decrypt -oaep -inkey $KEY -in $SKEY.bin -out symkey.key
 
 # Decrypt the message to stdout
-openssl aes-256-cbc -d -in $MSG -pass file:symkey.key
+openssl aes-256-cbc -a -d -in $MSG -pass file:symkey.key
 
 # Remove the symmetric key, as it is supposed to be used one time only
 # Again, all these removals should be done with a disk-rewriting tool, not with just rm
